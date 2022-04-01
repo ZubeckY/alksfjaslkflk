@@ -1,0 +1,9 @@
+.bacgrey {
+    background-color: #ccc
+}
+.margins {
+    margin: 0 10px; background-color: #fff;
+}
+.margins:first-child {
+    padding-top: 20px;
+}
