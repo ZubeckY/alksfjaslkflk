@@ -4,10 +4,6 @@
 
 <script>
     export default {
-        data () {
-            return {
-            }
-        },
         props: [ 'el'],
         emits: ['showPaginList'],
     }
