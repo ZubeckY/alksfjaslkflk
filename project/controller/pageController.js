@@ -22,14 +22,14 @@ class pageController {
         const contacts = new Contacts ({name, surname, patronymic, phone})
         await contacts
         .save ()
-        .then  (contacts => res.send (contacts))
+        .then  (result => res.status (200))
         .catch (error => res.status (400))
     }
     // Удаление контакта
     async deleteContact (req, res) {
         await Contacts
         .findByIdAndDelete (req.params.id)
-         .then  (contacts => res.send (contacts))
+        .then  (result => res.status (200))
         .catch (error => res.status (400))
     }
     // Редактирование контакта (get)
@@ -45,7 +45,7 @@ class pageController {
         const { id } = req.params;
         await Contacts
         .findByIdAndUpdate (id, {name, surname, patronymic, phone})
-        .then  (contacts => res.send (contacts))
+        .then  (result => res.status (200))
         .catch (error => res.status (400))
     }
     // Страница ошибки
